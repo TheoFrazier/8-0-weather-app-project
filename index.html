@@ -1,32 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Weather App - JavaScript</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Weather App Project</title>
+  <meta name="Weath-App-Project" />
+  <meta name="By-Charlie-Moran" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  
 </head>
 
 <body>
+    <header>
+        <section>
+            <form class="top">
+                <h1>Weather App</h1>
+                <label for="">
+                    Location
+                    <input type="text" placeholder="Location" name="search" />
+                </label>
+                <input type="submit" value="Get Weather" />
+            </form>
+            <main class="display">
+                <section class="placeholder">
+                    Choose a location to view the weather on location.
+                </section>
+                <div>
+                    <section id="today"></section>
+                    <section id="tomorrow"></section>
+                    <section id="nextday"></section>
+                </div>
+            </main>
+            <aside class="history">
+                <h5>Previous Searches</h5>
+                <p>No previous searches</p>
+            </aside>
+            
+        </section>
+        
+    </header>
 
-    <div id="header">
-        <div class="app-title">
-            <p>Weather App</p>
-        </div>
-        <form action="submit">Get Weather</form>
-    </div>
-
-    <div id="current-locations-container">
-
-    </div>
-
-    <div id="previous-searches">
-
-    </div>
-
-
-
-    <script defer src="script.js"></script>
 </body>
-
 </html>

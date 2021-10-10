@@ -1,0 +1,68 @@
+.top {
+    background-color: teal;
+    border: 3px solid black;
+    height: 100px;
+    text-align: center;
+}
+
+header section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+form {
+    grid-column: 2/6;
+}
+
+main {
+    grid-column: 2/5;
+}
+
+aside {
+    margin-left: 14px;
+}
+
+aside p {
+    text-indent:20%;
+}
+
+#today {
+    grid-column: 2/3;
+}
+
+.display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.placeholder {
+    border: 2px solid cyan;
+    background-color: grey;
+    grid-column: 1/4;
+    padding: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+div {
+    display: grid;
+    grid-column: 1/2;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+div section {
+    display: inline-block;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
