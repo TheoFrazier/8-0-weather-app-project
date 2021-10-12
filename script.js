@@ -58,14 +58,9 @@ function getWeather() {
                 let mostRecentSearchDiv = document.createElement("div")
                 mostRecentSearchDiv.classList.add("recent-search-item")
 
-                // <div>
-                // <div class = "recent-search-item">
-                //<div>Info goes here</div>
-                //</div>
-                //</div>
 
                 let recentInfoDiv = document.createElement("div")
-                recentInfoDiv.textContent = "hi"
+                recentInfoDiv.innerHTML = `<p>${area}</p> - </p> ${feels}°F</p>`;
 
                 recentInfoDiv.addEventListener("click", (event) => {
                     getWeather(event.target.textcontent, false)
@@ -79,13 +74,14 @@ function getWeather() {
             })
             .catch(console.log);
         event.target.reset();
-        /*historyAside(links, area[0].value, FeelsLikeF);
-        document.querySelector("aside").classList.add("asideHeight");
-        document
-          .querySelector(".history a:last-child")
-          .addEventListner("click", eventHistory);*/
+
     });
 }
+
+
+getWeather()
+
+
 /*const getLinks = () => {
   const links = document.querySelectorAll(".history a");
   links.forEach((link) => {
@@ -154,4 +150,3 @@ const eventHistory = (event) => {
 };
 */
 
-getWeather()
