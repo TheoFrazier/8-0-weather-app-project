@@ -49,7 +49,7 @@ aside p {
 div {
     display: grid;
     grid-column: 1/2;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -65,4 +65,30 @@ div section {
 
 .block {
     display: block;
+}
+
+#weather-data-div {
+    border: 3px solid black;
+    border-radius: 15px;
+    grid-column: 1/4;
+    padding: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+#weather-data-div 
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Open Sans', sans-serif;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 10px;
+}
+
+.asideHeight {
+    height: 235px;
 }
