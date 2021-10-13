@@ -55,16 +55,19 @@ function getWeather() {
 
                 let searchHistory = document.querySelector(".history");
 
+                let historyPlaceHolder = document.querySelector("#placeholder-history")
+                historyPlaceHolder.remove("h5")
+
                 let mostRecentSearchDiv = document.createElement("div")
                 mostRecentSearchDiv.classList.add("recent-search-item")
 
 
                 let recentInfoDiv = document.createElement("div")
-                recentInfoDiv.innerHTML = `<p>${area}</p> - </p> ${feels}°F</p>`;
+                recentInfoDiv.innerHTML = `${area} - ${feels}°F`;
 
                 recentInfoDiv.addEventListener("click", (event) => {
                     getWeather(event.target.textcontent, false)
-                })
+                });
 
                 mostRecentSearchDiv.append(recentInfoDiv)
 

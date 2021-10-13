@@ -92,3 +92,7 @@ p{
 .asideHeight {
     height: 235px;
 }
+
+.recent-search-item {
+    display: inline-block;
+}
