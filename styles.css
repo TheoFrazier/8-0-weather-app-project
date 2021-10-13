@@ -37,7 +37,7 @@ aside p {
 
 .placeholder {
     border: 2px solid cyan;
-    background-color: grey;
+    background-image: url(https://res.allmacwallpaper.com/pic/Thumbnails/18983_728.jpg);
     grid-column: 1/4;
     padding: 25px;
     margin-top: 10px;
@@ -45,6 +45,10 @@ aside p {
     text-align: center;
     display: inline-block;
 }
+
+.mainLoginInput::-webkit-input-placeholder {
+    font-family: 'Open Sans', sans-serif;
+  }
 
 div {
     display: grid;
@@ -78,7 +82,7 @@ div section {
     display: inline-block;
 }
 
-#weather-data-div 
+
 
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Open Sans', sans-serif;
@@ -88,7 +92,6 @@ p{
     font-family: 'Open Sans', sans-serif; 
     font-size: 10px;
 }
-
 .asideHeight {
     height: 235px;
 }
