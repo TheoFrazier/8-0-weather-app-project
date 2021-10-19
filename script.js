@@ -53,7 +53,7 @@ function getWeather() {
           getWeather(event.target.textcontent, false)
         })
         */
-        
+
         mostRecentSearchDiv.append(recentInfoDiv)
         searchHistory.append(mostRecentSearchDiv)
         placeholder.innerHTML = `<h3>${area}</h3><p>Area: ${area}</p><p>Region: ${region}</p><p>Country: ${country}</p><p>Currently: Feels like ${feels}°F</p>`;
@@ -62,8 +62,22 @@ function getWeather() {
           event.preventDefault()
           const displayPrevious = document.querySelector(".placeholder")
           displayPrevious.innerHTML = `<h3>${area}</h3><p>Area: ${area}</p><p>Region: ${region}</p><p>Country: ${country}</p><p>Currently: Feels like ${feels}°F</p>`;
+
+          for (let i = 0; i < 3; i++) {
+            const avgtempF = obj.weather[i].avgtempF;
+            const mintempF = obj.weather[i].mintempF;
+            const maxtempF = obj.weather[i].maxtempF;
+            function iconDice(min, max) {
+              return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+            const displayIcon = iconDice(1, 4);
+            arr[
+              i
+            ].id.innerHTML = `<h5>${arr[i].title}</h5><img src="img/${displayIcon}.svg" /><p>Average Temperature: ${avgtempF}°F</p><p>Max Temperature: ${maxtempF}°F</p><p>Minimum Temperature: ${mintempF}°F</p>`;
+          }
+
         })
-        
+
       })
       .catch(console.log);
     event.target.reset();
