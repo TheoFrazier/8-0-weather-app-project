@@ -34,7 +34,7 @@ function getWeather() {
             i
           ].id.innerHTML = `<h5>${arr[i].title}</h5><img src="img/${displayIcon}.svg" /><p>Average Temperature: ${avgtempF}°F</p><p>Max Temperature: ${maxtempF}°F</p><p>Minimum Temperature: ${mintempF}°F</p>`;
         }
-        placeholder.innerHTML = `<h3>${area}</h3><p>Area: ${area}</p><p>Region: ${region}</p><p>Country: ${country}</p><p>Currently: Feels like ${feels}°F</p>`;
+
         let searchHistory = document.querySelector(".history");
         let mostRecentSearchDiv = document.createElement("div")
         mostRecentSearchDiv.classList.add("recent-search-item")
@@ -46,14 +46,24 @@ function getWeather() {
         //</div>
 
         let recentInfoDiv = document.createElement("div")
-        recentInfoDiv.innerHTML = `<p>${area}</p>-</p> ${feels}°F</p>`;
+        recentInfoDiv.innerHTML = `<a href = "">${area}</a> - </p> ${feels}°F</p>`;
 
+        /*
         recentInfoDiv.addEventListener("click", (event) => {
           getWeather(event.target.textcontent, false)
         })
+        */
+        
         mostRecentSearchDiv.append(recentInfoDiv)
         searchHistory.append(mostRecentSearchDiv)
-        /*getLinks();*/
+        placeholder.innerHTML = `<h3>${area}</h3><p>Area: ${area}</p><p>Region: ${region}</p><p>Country: ${country}</p><p>Currently: Feels like ${feels}°F</p>`;
+
+        recentInfoDiv.addEventListener("click", (event) => {
+          event.preventDefault()
+          const displayPrevious = document.querySelector(".placeholder")
+          displayPrevious.innerHTML = `<h3>${area}</h3><p>Area: ${area}</p><p>Region: ${region}</p><p>Country: ${country}</p><p>Currently: Feels like ${feels}°F</p>`;
+        })
+        
       })
       .catch(console.log);
     event.target.reset();
